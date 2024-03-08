@@ -5,8 +5,7 @@
 
 
 ## Describtion
-The provided repository showcases the application of deep learning techniques in predicting the spectral response of all-optical plasmonic switches. It is built upon the research presented in the paper titled "A-deep-learning-method-for-empirical-spectral-prediction-and-inverse-design-of-all-optical-nonlinear-plasmonic-ring-resonator-switches".
-This repository is specifically tailored for addressing inverse design challenges, with a specific focus on the fields of photonics and optics.
+The repository provided demonstrates the use of deep learning techniques in predicting the spectral response of all-optical plasmonic switches. It is based on the research presented in the paper titled "Spectrum_Prediction_and_Inverse_Design_of_All-Optical_Nonlinear_Plasmonic_Square_Ring_Resonator_Switches_Using_Deep_Learning." This repository is designed to address inverse design challenges, specifically in the fields of photonics and optics.
 
 #### Table of contents
 * [Prerequisites](#Prerequisites)

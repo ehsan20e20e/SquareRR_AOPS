@@ -5,7 +5,7 @@ The code for the research presented in the paper titled "Spectrum prediction and
 Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
 
 This code is corresponding to the Forward Deep Neural Network (DNN) section of the article.
-This code regenerates the Fig. 4b and c of the paper.
+This code regenerates the Fig. S6 of the paper.
 Please cite the paper in any publication using this code.
 """
 import matplotlib.pyplot as plt 

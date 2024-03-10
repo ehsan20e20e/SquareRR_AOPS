@@ -19,11 +19,11 @@ The provided repository serves as a demonstration of the application of deep lea
   * * *[Figure S5](#Figure_S5)
   * * *[Figure S6](#Figure_S6) 
 #### Instructions
-The following guidelines provide detailed instructions for setting up and running a copy of the project on your local machine, thus enabling you to perform testing and development activities. These instructions are tailored to ensure accuracy and completeness in executing the project setup process. Consequently, we recommend that you adhere to them meticulously.
+The following guidelines provide detailed instructions for setting up and running a copy of the project on your local machine, thus enabling you to perform testing and development activities. These instructions are tailored to ensure accuracy and completeness when executing the project setup process. Consequently, we recommend that you adhere to them meticulously.
 ## Prerequisites
-In order to execute the MATLAB and Python code, it is imperative to have MATLAB installed on your system. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. It must be noted that the project can be completed without these programs, however, without the installation of MATLAB and Python, the ability to compare speed and generate data will be limited.
+It is imperative to have MATLAB installed on your system in order to execute the MATLAB and Python code. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. It must be noted that the project can be completed without these programs; however, without the installation of MATLAB and Python, the ability to compare speed and generate data will be limited.
 
-https://github.com/ehsan20e20e/SquareRR_AOPS/releases/tag/1
+https://github.com/ehsan20e20e/SquareRR_AOPS/releases
 
 https://drive.google.com/drive/folders/12n9jV9eL3ReEAF2YD4dCLRF0pCa51JTy?usp=drive_link
 

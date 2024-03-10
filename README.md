@@ -51,7 +51,6 @@ In order to facilitate the replication of Figure 4b,c, we have retained the obta
 
 ### Inverse_model
 To facilitate the training of the inverse model, we recommend utilizing the Python source code provided in the 'SquareRR_AOPS_Inverse_model.py' file. We have meticulously curated 147,456 distinct examples derived from FDTD simulations and have saved them in the "result_H.csv" file, which can be accessed through the following links:
-
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases/download/untagged-54db6d6bee08573b3623/result_H.rar
 
 The aforementioned instances may be employed to train the inverse model, while the provided Python code can be utilized to simplify the process. By capitalizing on these resources, you can significantly improve the efficiency and precision of your model training.

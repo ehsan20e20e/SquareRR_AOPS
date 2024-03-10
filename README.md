@@ -35,6 +35,8 @@ https://github.com/ehsan20e20e/SquareRR_AOPS/releases
 ## Geting_started
 To utilize the contents of this repository, it is crucial to generate the necessary data for the all-optical switch structure using various FDTD (Finite-Difference Time-Domain) solvers such as Lumerical, RSoft, or MATLAB. These solvers enable the production and simulation of the optical switch structure, which facilitates the analysis of its performance and characteristics.
 
+The file named "SquareRR_AOPS_Structure_file.fsp" is recommended for Lumerical simulations. To create the three-dimensional structure of AOPS, you can use the "Create SquareRR_AOPS_structure_FDTD_solver.lsf" file. For automatic data generation, the "SquareRR_AOPS_auto_FDTD_dataset_generator" script file is available. It is advisable to utilize these tools for efficient and accurate performance in your business or academic setting.
+
 The proposed plasmonic switch structure's raw data is available in CSV files. These files have been provided to facilitate the reproduction of the graphs and results presented in this article.
 
 ===> Please be advised that there was an error in the input data related to the Drop port. The data was mistakenly entered as negative, which has been rectified in the written code. To ensure the accuracy of the data, we have applied the absolute value function to the input data. We apologize for any inconvenience this may have caused and assure you that we have taken the necessary measures to prevent such errors in the future.

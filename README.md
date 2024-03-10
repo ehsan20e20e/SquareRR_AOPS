@@ -21,7 +21,14 @@ The provided repository serves as a demonstration of the application of deep lea
 #### Instructions
 The following guidelines provide detailed instructions for setting up and running a copy of the project on your local machine, thus enabling you to perform testing and development activities. These instructions are tailored to ensure accuracy and completeness when executing the project setup process. Consequently, we recommend that you adhere to them meticulously.
 ## Prerequisites
-It is imperative to have MATLAB installed on your system to execute the MATLAB and Python code. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. The project can be completed without these programs; however, the ability to compare speed and generate data will be limited without installing MATLAB and Python.
+To obtain the results presented in this article, the use of the following software packages is recommended.
+1) MATLAB (for optimization)
+2) Python (for Neural Networks and deep learning)
+3) Lumerical (for FDTD simulations)
+4) COMSOL (for FEM simulations)
+5) Qualitek-4 (for Taguchi method)
+6) Minitab (for DOE)
+Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0, Ansys Lumerical version 2023 R1, COMSOL Multiphysics 6.1, Qualitek-4 version 14.2.0 and Minitab version 21.4.2. The project can be completed without these programs; however, the ability to compare speed and generate data will be limited without installing MATLAB and Python.
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases
 
 ## Geting_started

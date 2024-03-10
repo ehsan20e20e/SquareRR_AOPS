@@ -1,10 +1,7 @@
 """
 The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
 
-@authors: Ehsan Adibnia, Majid Ghadrdan and Mohammad Ali Mansouri-Birjandi
-Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
-
-This code is corresponding to the forward Deep Neural Network (DNN) section of the article.
+This code corresponds to the article's forward Deep Neural Network (DNN) section.
 Please cite the paper in any publication using this code.
 """
 
@@ -21,7 +18,7 @@ from keras.layers import Dropout
 from keras.callbacks import EarlyStopping
 from keras.optimizers import Adam
 
-### Load the data from CSV file (the results of FDTD solver)
+### Load the data from the CSV file (the results of the FDTD solver)
 result = pd.read_csv("result_V.csv", header=None)
 result = result.to_numpy()
 
@@ -30,7 +27,7 @@ y = result[0:result.shape[0],6:8]
 
 # Allocation of 70% of the total data to the training data
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=0.30, shuffle='true')
-# Allocation of 50% of the remaining data to the validateion data and 50% to the test data (15% validation and 15% test of total)
+# Allocation of 50% of the remaining data to the validation data and 50% to the test data (15% validation and 15% test of total)
 x_test, x_val, y_test, y_val = train_test_split(x_val, y_val, test_size=0.50, shuffle='true')
 
 ### Feature Scaling
@@ -39,13 +36,13 @@ x_train = sc.fit_transform(x_train)
 x_val = sc.transform(x_val)
 x_test = sc.transform(x_test)
 
-# To prevent the RAM from being filled up, we delete the result.
+# We delete the result to prevent the RAM from being filled up.
 del result
 ### Defining the Layers of the deep neural network (DNN)
-# 11 hidden layer and 160 neurons in central layer
-# Slope of 0.2 has been set for the Leaky ReLU
-# Input consist of 5 geometric parameter of all-optical plasmonic switch (AOPS) and the wavelength
-# Output is the transmission value at the wavelength (800 point for through port and 800 point for drop port)
+# 11 hidden layer and 160 neurons in the central layer
+# A slope of 0.2 has been set for the Leaky ReLU
+# Input consists of 5 geometric parameters of the all-optical plasmonic switch (AOPS) and the wavelength
+# Output is the transmission value at the wavelength (800 points for through port and 800 points for drop port)
 Model = Sequential()
 Model.add(Dense(5, input_dim=6))
 Model.add((LeakyReLU(alpha=0.2)))
@@ -87,7 +84,7 @@ es = EarlyStopping(monitor= 'val_loss', mode = 'auto', verbose=1, patience=5,)
 
 ### Configuring the settings of the training procedure 
 # Mean Squared  Error (MSE) function has been used for loss estimation
-# AdaDelta Optimizer has been used and learning rate of 0.1 has been set 
+# AdaDelta Optimizer has been used and a learning rate of 0.1 has been set 
 Model.compile(loss='mse',
               optimizer = Adam(learning_rate=0.1))
 
@@ -116,7 +113,7 @@ predictions = Model.predict(x_test)
 Loss = Model.evaluate(x_test, y_test)
 print(Loss)
 
-# save the loss values in csv file
+# save the loss values in CSV file
 with open('history_Forward_model.pkl', 'wb') as f:
     pickle.dump(history.history, f)
 fieldnames = ['Epoch', 'Training Loss', 'Validation Loss']

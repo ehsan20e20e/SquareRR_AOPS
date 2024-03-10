@@ -71,8 +71,7 @@ As part of step 2 (transmission spectra), we have taken measures to facilitate t
 
 
 #### Figure_S4
-To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link: 
-
+To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link:
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
 
 #### Figure_S5

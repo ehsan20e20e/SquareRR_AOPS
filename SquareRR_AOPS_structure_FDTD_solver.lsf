@@ -1,0 +1,27 @@
+#The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning."
+#This script file is used to create the structure of AOPS in the FDTD solver.
+#Please cite the paper in any publication using this code.
+select('input');
+set("y span",W_input);
+set("y",Yc_input);
+
+select('output');
+set("x span",W_output);
+set("x",Xc_output);
+
+select('rectangle1');
+Yc_rectangle1=((Yc_input)+(W_input/2)+(G_input)+(W_rectangle1/2));
+Xc_rectangle1=((Xc_output)-((W_output/2)+(G_output)+(W_rectangle1/2)));
+set("y",Yc_rectangle1);
+set("x",Xc_rectangle1);
+set("x span",W_rectangle1);
+set("y span",W_rectangle1);
+
+select('rectangle2');
+Yc_rectangle2=Yc_rectangle1;
+Xc_rectangle2=Xc_rectangle1;
+W_rectangle2=W_rectangle1-(2*W_rect);
+set("y",Yc_rectangle2);
+set("x",Xc_rectangle2);
+set("x span",W_rectangle2);
+set("y span",W_rectangle2);

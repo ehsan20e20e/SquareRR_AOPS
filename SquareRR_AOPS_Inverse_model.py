@@ -1,10 +1,7 @@
 """
 The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
 
-@authors: Ehsan Adibnia, Majid Ghadrdan and Mohammad Ali Mansouri-Birjandi
-Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
-
-This code is corresponding to the Inverse Deep Neural Network (DNN) section of the article.
+This code corresponds to the article's Inverse Deep Neural Network (DNN) section.
 Please cite the paper in any publication using this code.
 """
 import numpy as np 
@@ -32,7 +29,7 @@ y = result[0:result.shape[0],1600:1606]
 
 # Allocation of 70% of the total data to the training data
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=0.30, shuffle='true')
-# Allocation of 50% of the remaining data to the validateion data and 50% to the test data (15% validation and 15% test of total)
+# Allocation of 50% of the remaining data to the validation data and 50% to the test data (15% validation and 15% test of total)
 x_test, x_val, y_test, y_val = train_test_split(x_val, y_val, test_size=0.50, shuffle='true')
 
 ### Feature Scaling
@@ -42,9 +39,9 @@ x_val = sc.transform(x_val)
 
 ### Defining the Layers of the deep neural network (DNN)
 # 6 hidden layer and 60 neurons in each layer
-# Slope of 0.2 has been set for the Leaky ReLU
-# Input consist of 1600 point of transmission spectrum (800 point for through port and 800 point for drop port)
-# Output consist of 5 geometric parameter of all-optical plasmonic switch (AOPS)
+# A slope of 0.2 has been set for the Leaky ReLU
+# Input consists of 1600 points of transmission spectrum (800 points for through port and 800 points for drop port)
+# Output consists of 5 geometric parameters of the all-optical plasmonic switch (AOPS)
 Model = Sequential()
 Model.add(Dense(5, input_dim=1600))
 Model.add((LeakyReLU(alpha=0.2)))
@@ -83,7 +80,7 @@ Model.summary()
 
 ### Configuring the settings of the training procedure 
 # Mean Squared Error (MSE) function has been used for loss estimation
-# AdaDelta Optimizer has been used and learning rate of 0.1 has been set 
+# AdaDelta Optimizer has been used and a learning rate of 0.1 has been set 
 Model.compile(loss='mse',
               optimizer= Adam(learning_rate=0.1))
 

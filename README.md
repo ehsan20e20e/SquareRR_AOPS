@@ -2,18 +2,16 @@
 
 ![SquareRR_AOPS](https://github.com/ehsan20e20e/SquareRR_AOPS/assets/106914575/89f790e3-0014-4e3d-8859-2e04dee52203)
 
-
-
 ## Describtion
-The repository provided demonstrates the use of deep learning techniques in predicting the spectral response of all-optical plasmonic switches. It is based on the research presented in the paper titled "Spectrum_Prediction_and_Inverse_Design_of_All-Optical_Nonlinear_Plasmonic_Square_Ring_Resonator_Switches_Using_Deep_Learning." This repository is designed to address inverse design challenges, specifically in the fields of photonics and optics.
+The provided repository serves as a demonstration of the application of deep learning techniques in the prediction of the spectral response of all-optical plasmonic switches. This repository is based on the extensive research presented in the paper titled "Spectrum_Prediction_and_Inverse_Design_of_All-Optical_Nonlinear_Plasmonic_Square_Ring_Resonator_Switches_Using_Deep_Learning." It has been designed to address inverse design challenges, with a specific focus on the fields of photonics and optics.
 
 #### Table of contents
 * [Prerequisites](#Prerequisites)
 * [Geting started](#Geting_started)
 * * [Forward model](#Forward_model)
-  * * *[Figure 3](#Figure_3)
+  * * *[Figure 4](#Figure_4)
 * * [Inverse model](#Inverse_model)
-  * * *[Figure 6](#Figure_6) 
+  * * *[Figure 7](#Figure_7) 
 * * [Supplementary Information](#Supplementary_Information)
   * * *[Figure S1](#Figure_S1)
   * * *[Figure S2](#Figure_S2)
@@ -21,22 +19,23 @@ The repository provided demonstrates the use of deep learning techniques in pred
   * * *[Figure S5](#Figure_S5)
   * * *[Figure S6](#Figure_S6) 
 #### Instructions
-These instructions will guide you to set up and run a copy of the project on your local machine for development and testing purposes.
+The following guidelines provide detailed instructions for setting up and running a copy of the project on your local machine, thus enabling you to perform testing and development activities. These instructions are tailored to ensure accuracy and completeness in executing the project setup process. Consequently, we recommend that you adhere to them meticulously.
 ## Prerequisites
-To execute the MATLAB and Python code, you will need to have MATLAB installed on your system. Specifically, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0 for this code. Please note that while the project can be completed without these programs, the ability to compare speed and generate data will be limited unless MATLAB and Python are installed.
-The required datasets for executing these codes can be accessed through the following links:
+In order to execute the MATLAB and Python code, it is imperative to have MATLAB installed on your system. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. It must be noted that the project can be completed without these programs, however, without the installation of MATLAB and Python, the ability to compare speed and generate data will be limited.
 
-https://github.com/ehsan20e20e/CircularRR_AOPS/releases/tag/1
+https://github.com/ehsan20e20e/SquareRR_AOPS/releases/tag/1
 
 https://drive.google.com/drive/folders/12n9jV9eL3ReEAF2YD4dCLRF0pCa51JTy?usp=drive_link
+
 ## Geting_started
-In order to make use of this repository, it is essential to generate the required data for the all-optical switch structure using different FDTD (Finite-Difference Time-Domain) solvers, such as Lumerical, RSoft, or MATLAB. These solvers facilitate the generation and simulation of the optical switch structure, enabling the analysis of its performance and characteristics.
+To utilize the contents of this repository, generating the necessary data for the all-optical switch structure using various FDTD (Finite-Difference Time-Domain) solvers such as Lumerical, RSoft, or MATLAB is crucial. These solvers enable the production and simulation of the optical switch structure, which facilitates the analysis of its performance and characteristics.
 
-In this case, the raw data generated for the proposed plasmonic switch structure is available in the form of CSV files. These files have been provided to aid in the regeneration of the graphs and results that are presented in this article.
+The proposed plasmonic switch structure's raw data is available in CSV files. These files have been provided to facilitate the reproduction of the graphs and results presented in this article.
 
-===> Please note that the data related to Drop port has been mistakenly entered as negative. Therefore, in the written code, we have taken the absolute value of the input data
+===> Please be advised that there was an error in the input data related to the Drop port. The data was mistakenly entered as negative, which has been rectified in the written code. To ensure the accuracy of the data, we have applied the absolute value function to the input data. We apologize for any inconvenience this may have caused and assure you that we have taken the necessary measures to prevent such errors in the future.
+
 ### Forward_model
-To train the forward model, you can utilize the Python code provided in the 'CircularRR_AOPS_Forward_model.py' file. We have saved the 147,456 unique examples generated through FDTD simulations in the "result_V.csv" file. To execute the 'CircularRR_AOPS_Forward_model.py' file, you will require the 'result_H.csv' file, which constitutes big data with a size of 5.8 gigabytes.
+In order to train the forward model, it is recommended to utilize the Python code provided in the 'SquareRR_AOPS_Forward_model.py' file. To this end, we have generated 147,456 unique examples through FDTD simulations and saved them in the "result_V.csv" file (Please take note of the following information: 18432 out of the total number of examples is sufficient.). As a prerequisite for executing the 'CircularRR_AOPS_Forward_model.py' file, it is essential to obtain the 'result_H.csv' file which constitutes a big data file with a size of 5.7 gigabytes. By following these steps, you can effectively train the forward model and achieve accurate results.
 
 The 'result_V.csv' file can be accessed as a single file through the following link: https://github.com/ehsan20e20e/CircularRR_AOPS/releases/download/untagged-80fe3b94e704169ada0a/result_V.rar
 
@@ -56,31 +55,37 @@ second part link: https://drive.google.com/file/d/1IyZfRIT8rBBdbkuAULWjWX0sWpynG
 
 7th oart link: https://drive.google.com/file/d/1kWqZg9hmLQG77qri3zCgIPGm32_gE_vK/view?usp=drive_link
 
-#### Figure_3
-Figure 3a: The loss values after the completion of the training process will generate Figure 3a.
+#### Figure_4
+Upon completion of the training process, Figure 4a will display the loss values. Such values are crucial in determining the efficiency of the training process and assessing the overall performance of the system under evaluation. It is worth noting that Figure 4a provides useful insights into the system's optimization trajectory, which can help inform future improvements.
 
-Figure 3b and 3c: To obtain Figures 3b and 3c, you can instruct the trained model to predict the output spectra for unseen geometric parameters at wavelengths ranging from 1000 to 1800 nm. In other words, you need to predict the transmission spectra for 800 different wavelengths to form the complete transmission spectrum. Then, compare this predicted spectrum with the spectrum obtained using the FDTD method. For the closest data, you would need to search for the closest data points to the selected geometric parameters in file "result_V.csv". 
+To obtain Figures 4b and 4c, it is necessary to instruct the trained model to predict the output spectra for unseen geometric parameters, at wavelengths ranging from 1000 to 1800 nm. Essentially, this requires predicting the transmission spectra for 800 different wavelengths to form the complete transmission spectrum. Once this is done, it is necessary to compare the predicted spectrum with the spectrum obtained using the FDTD method. To identify the closest data, it is necessary to search for the nearest data points to the selected geometric parameters in the "result_V.csv" file.
 
-For the purpose of easily reproducing the Figure 3b,c, we have stored the acquired data. Therefore, to test or use forward model, you can utilize the file "CircularRR_AOPS_Fig_03bc.py". The required data for running this file is stored in the file "CircularRR_AOPS_Fig_03bc_Lower_sample.csv", "CircularRR_AOPS_Fig_03bc_Higher_sample.csv", "CircularRR_AOPS_Fig_03bc_FDTD_origin.csv", "CircularRR_AOPS_forward_model.json" and "CircularRR_AOPS_forward_model_weights.h5" which have been loaded here.
-
+In order to facilitate the replication of Figure 4b,c, we have retained the obtained data for your convenience. As such, the file "SquareRR_AOPS_Fig_04bc.py" may be used to test or apply the forward model. The relevant data for running this file is stored in the files
+ "CircularRR_AOPS_Fig_03bc_Lower_sample.csv",
+ "SquareRR_AOPS_Fig_04bc_Higher_sample.csv",
+ "SquareRR_AOPS_Fig_04bc_FDTD_origin.csv",
+ "SquareRR_AOPS_forward_model.json",
+ and "SquareRR_AOPS_forward_model_weights.h5", all of which have been included here.
 
 ### Inverse_model
-To train the inverse model, you can utilize the Python code provided in the 'CircularRR_AOPS_Inverse_model.py' file. We have saved the 147,456 unique examples generated through FDTD simulations in the "result_H.csv" file, which has been uploaded in the following links:
+To facilitate the training of the inverse model, we recommend utilizing the Python source code provided in the 'SquareRR_AOPS_Inverse_model.py' file. We have meticulously curated 147,456 distinct examples derived from FDTD simulations and have saved them in the "result_H.csv" file, which can be accessed through the following links:
 
 https://github.com/ehsan20e20e/CircularRR_AOPS/releases/download/untagged-80fe3b94e704169ada0a/result_H.rar
 https://drive.google.com/file/d/1XW8CZP60sRJwzeInc0dSmcq_Q4VMNfoE/view?usp=drive_link
 
-To execute the 'CircularRR_AOPS_Inverse_model.py' file, you will require the 'result_H.csv' file, which constitutes big data with a size of 1.8 gigabytes.
+The aforementioned instances may be employed to train the inverse model, while the provided Python code can be utilized to simplify the process. By capitalizing on these resources, you can significantly improve the efficiency and precision of your model training.
 
-#### Figure_6
-The loss values after the completion of the training process will generate Figure 6a.
-To test invese model and to generate Figure 6b and c, it is necessary to juxtapose the data produced by the FDTD solver based on the geometric parameters derived from the inverse model with the provided geometric parameters. To test the inverse model and obtain the legend of Figure 6, you would need to feed the data generated by the FDTD solver as input to the inverse neural network model, specifically for the farthest data point from the training data. Then, you can obtain the output of the neural network model. Finally, in order to alleviate the error of the forward network, it is essential to obtain the transmission spectrum of the proposed structure using an FDTD solver.
+To execute the 'SquareRR_AOPS_Inverse_model.py' file, it is necessary to have the 'result_H.csv' file. This file contains a significant amount of data, with a size of 1.6 gigabytes. Please ensure that you have this file available before proceeding with the execution of the aforementioned file.
 
-Figure 6b and c:
+#### Figure_7
+Upon the completion of the training process, the loss values will culminate in the generation of Figure 7a.
+In order to test the inverse model and generate Figure 7b and c, it is necessary to compare the data produced by the FDTD solver based on the geometric parameters derived from the inverse model with the provided geometric parameters. To assess the accuracy of the inverse model and obtain the legend of Figure 7, it is recommended to use the data generated by the FDTD solver as input to the inverse neural network model, specifically for the farthest data point from the training data. This will enable the generation of the output of the neural network model. To minimize the error of the forward network, it is essential to obtain the transmission spectrum of the proposed structure using an FDTD solver.
 
-step 1 (geometric parameter): For the purpose of easily reproducing the legend of Figure 6b and c, we have stored the acquired data. Therefore, to test or use inverse model, you can utilize the file "CircularRR_AOPS_Figure06.py". The required data for running this file is stored in the file "CircularRR_AOPS_Figure06_furthest_data.csv", "CircularRR_AOPS_inverse_model.json" and "CircularRR_AOPS_inverse_model_weights.h5" which have been loaded here.
+Figure 7b and c:
 
-step 2 (transmission spectra): For the purpose of easily reproducing the Figure 6b and c, we have stored the acquired data. Therefore, to regenerate the Figure 6b and c, you can utilize the file "CircularRR_AOPS_Fig_06bc.py". The required data for running this file is stored in the file "CircularRR_AOPS_Fig_06bc_furthest_predicted.csv" which have been loaded here.
+Step 1: Geometric Parameter. In order to facilitate the replication of the legend of Figure 7b and c, we have meticulously archived the obtained data. Consequently, for validation or application of the inverse model, the "SquareRR_AOPS_Figure07.py" file can be utilized. The mandatory data files for running this program are "SquareRR_AOPS_Figure06_furthest_data.csv", "CircularRR_AOPS_inverse_model.json", and "SquareRR_AOPS_inverse_model_weights.h5", all of which have been preloaded here.
+
+As part of step 2 (transmission spectra), we have taken measures to facilitate the reproduction of Figure 7b and c. Specifically, we have stored the acquired data, which you can use to regenerate the aforementioned figure. To this end, we recommend utilizing the file "SquareRR_AOPS_Fig_07bc.py." The required data for running this file is stored in the file "SquareRR_AOPS_Fig_07bc_furthest_predicted.csv," which we have already loaded for your convenience.
 
 ### Supplementary_Information 
 #### Figure_S1

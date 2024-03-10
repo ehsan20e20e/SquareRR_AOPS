@@ -23,7 +23,7 @@ The following guidelines provide detailed instructions for setting up and runnin
 ## Prerequisites
 To obtain the results presented in this article, the use of the following software packages is recommended.
 1) MATLAB (for optimization)
-2) Python (for Neural Networks and deep learning)
+2) Python (for neural networks and deep learning)
 3) Lumerical (for FDTD simulations)
 4) COMSOL (for FEM simulations)
 5) Qualitek-4 (for Taguchi method)

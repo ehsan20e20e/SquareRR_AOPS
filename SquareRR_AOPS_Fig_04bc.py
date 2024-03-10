@@ -1,7 +1,6 @@
 """
 The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
 
-
 This code corresponds to the article's Forward Deep Neural Network (DNN) section.
 This code regenerates the Fig. 4b and c of the paper.
 Please cite the paper in any publication using this code.

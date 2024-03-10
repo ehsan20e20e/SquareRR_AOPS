@@ -1,0 +1,81 @@
+#The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning."
+#This script file is used to generate spectra using the FDTD method automatically
+#Please cite the paper in any publication using this code.
+switchtolayout;
+W_input=30*1e-9;
+W_output=30*1e-9;
+W_rect=30*1e-9;
+G_input=15*1e-9;
+G_output=15*1e-9;
+###
+Yc_input=-200*1e-9;
+Xc_output=355*1e-9;
+W_rectangle1=620*1e-9;
+W_rectangle2=560*1e-9;
+Yc_rectangle1=0;
+Xc_rectangle1=0;
+Yc_rectangle2=0;
+Xc_rectangle2=0;
+###
+W_input1=zeros(800,1);
+W_output1=zeros(800,1);
+W_rect1=zeros(800,1);
+G_input1=zeros(800,1);
+G_output1=zeros(800,1);
+###
+setnamed('::model','W_input',W_input);
+setnamed('::model','W_output',W_output);
+setnamed('::model','W_rect',W_rect);
+setnamed('::model','G_input',G_input);
+setnamed('::model','G_output',G_output);
+###
+for (i=0) {
+  W_input=30*1e-9+i*1e-9;
+  setnamed('::model','W_input',W_input);
+    for (j=0:2:30) {
+      W_output=30*1e-9+j*1e-9;      
+      setnamed('::model','W_output',W_output);  
+        for (k=0:2:30) {
+          W_rect=30*1e-9+k*1e-9;
+          setnamed('::model','W_rect',W_rect);
+            for (p=0:1:10) {
+                G_input=15*1e-9+p*1e-9;
+              setnamed('::model','G_input',G_input);
+                for (n=0:1:10) {
+                  G_output=15*1e-9+n*1e-9;
+                  setnamed('::model','G_output',G_output);
+                  
+                  run;
+      
+        mname1="monitor_1";        # monitor1 name
+        mname2="monitor_1_1";      # monitor2 name
+        T1=transmission(mname1);     # Power transmission through monitor1
+        T2=transmission(mname2);     # Power transmission through monitor2
+        filename1="T1";
+        filename2="T2";
+        savedata(filename1,T1);
+        savedata(filename2,T2);
+        loaddata(filename1);
+        loaddata(filename2);
+        write("C:\Adibnia simulation\0ee_T1.txt",num2str(T1));
+        write("C:\Adibnia simulation\0ee_T2.txt",num2str(T2));
+        
+                
+        W_input1(:,1)=W_input;
+        W_output1(:,1)=W_output;
+        W_rect1(:,1)=W_rect;
+        G_input1(:,1)=G_input;
+        G_output1(:,1)=G_output;
+
+        
+        for (u=1:1:800) {
+          str= num2str((u+1000))+", "+num2str(W_input1(u))+", "+num2str(W_output1(u))+", "+num2str(W_rect1(u))+", "+num2str(G_input1(u))+", "+num2str(G_output1(u))+", "+num2str(T1(u))+", "+num2str(T2(u));
+          write("C:\Adibnia simulation\0ee_T4.txt",str);}
+        switchtolayout;
+} 
+} 
+} 
+}
+}
+
+                  

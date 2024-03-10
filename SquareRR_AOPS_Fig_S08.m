@@ -1,8 +1,7 @@
 %The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
-%@authors: Ehsan Adibnia, Majid Ghadrdan and Mohammad Ali Mansouri-Birjandi
-%Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
-%This code is corresponding to the complex refractive index for silver obtained from Johnson and Cristy.
-%This code regenerates the Fig S8 of the Supplementary Information of the paper.
+
+%This code corresponds to the complex refractive index for silver obtained from Johnson and Cristy.
+%This code regenerates the Fig. S8 of the paper's Supplementary Information.
 %Please cite the paper in any publication using this code.
 %% =======================================================================
 clc
@@ -12,11 +11,11 @@ clear
 load Johnsonsilver.mat
 figure(1)
 yyaxis left
-plot(Johnsonsilver(1:48,1),Johnsonsilver(1:48,2),'linewidth',2) % plot the transmition spectrum
+plot(Johnsonsilver(1:48,1),Johnsonsilver(1:48,2),'linewidth',2) % plot the transmission spectrum
 hold on
 ylabel('Real part (blue solid)')
 yyaxis right
-plot(Johnsonsilver(1:48,1),Johnsonsilver(1:48,3),'linewidth',2, LineStyle='--') % plot the transmition spectrum
+plot(Johnsonsilver(1:48,1),Johnsonsilver(1:48,3),'linewidth',2, LineStyle='--') % plot the transmission spectrum
 ylabel('Imaginary part (red dashed)')
 xlabel('Wavelength(nm)')
 get(gca,'fontname')  

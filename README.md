@@ -28,6 +28,7 @@ To obtain the results presented in this article, the use of the following softwa
 4) COMSOL (for FEM simulations)
 5) Qualitek-4 (for Taguchi method)
 6) Minitab (for DOE)
+   
 Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0, Ansys Lumerical version 2023 R1, COMSOL Multiphysics 6.1, Qualitek-4 version 14.2.0 and Minitab version 21.4.2. The project can be completed without these programs; however, the ability to compare speed and generate data will be limited without installing MATLAB and Python.
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases
 

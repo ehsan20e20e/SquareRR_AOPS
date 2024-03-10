@@ -1,10 +1,8 @@
 """
 The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
 
-@authors: Ehsan Adibnia, Majid Ghadrdan and Mohammad Ali Mansouri-Birjandi
-Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
 
-This code is corresponding to the Forward Deep Neural Network (DNN) section of the article.
+This code corresponds to the article's Forward Deep Neural Network (DNN) section.
 This code regenerates the Fig. 4b and c of the paper.
 Please cite the paper in any publication using this code.
 """
@@ -24,7 +22,7 @@ y_train = result1[0:result1.shape[0],6]
 sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 
-# load the seved forward model
+# Load the saved forward model
 json_file = open("SquareRR_AOPS_forward_model.json", "r")
 loaded_model_json = json_file.read()
 json_file.close()

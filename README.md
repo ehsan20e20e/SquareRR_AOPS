@@ -21,7 +21,7 @@ The provided repository serves as a demonstration of the application of deep lea
 #### Instructions
 The following guidelines provide detailed instructions for setting up and running a copy of the project on your local machine, thus enabling you to perform testing and development activities. These instructions are tailored to ensure accuracy and completeness when executing the project setup process. Consequently, we recommend that you adhere to them meticulously.
 ## Prerequisites
-It is imperative to have MATLAB installed on your system to execute the MATLAB and Python code. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. The project can be completed without these programs; however, the ability to compare speed and generate data will be limited without the installation of MATLAB and Python.
+It is imperative to have MATLAB installed on your system to execute the MATLAB and Python code. Specifically, for this code, we utilized MATLAB version R2023a, Python version 3.7.13, and Spyder version 5.1.5 within Anaconda version 4.14.0. The project can be completed without these programs; however, the ability to compare speed and generate data will be limited without installing MATLAB and Python.
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases
 
 ## Geting_started
@@ -40,7 +40,7 @@ https://github.com/ehsan20e20e/SquareRR_AOPS/releases/download/untagged-54db6d6b
 #### Figure_4
 Upon completing the training process, Figure 4a will display the loss values. Such values are crucial in determining the efficiency of the training process and assessing the system's overall performance under evaluation. It is worth noting that Figure 4a provides useful insights into the system's optimization trajectory, which can help inform future improvements.
 
-To obtain Figures 4b and 4c, it is necessary to instruct the trained model to predict the output spectra for unseen geometric parameters, at wavelengths ranging from 1000 to 1800 nm. This requires predicting the transmission spectra for 800 different wavelengths to form the complete transmission spectrum. Once this is done, it is necessary to compare the predicted spectrum with the spectrum obtained using the FDTD method. To identify the closest data, searching for the nearest data points to the selected geometric parameters in the "result_V.csv" file is necessary.
+To obtain Figures 4b and 4c, it is necessary to instruct the trained model to predict the output spectra for unseen geometric parameters, at wavelengths ranging from 1000 to 1800 nm. This requires predicting the transmission spectra for 800 wavelengths to form the complete spectrum. Once this is done, it is necessary to compare the predicted spectrum with the spectrum obtained using the FDTD method. Searching for the nearest data points to the selected geometric parameters in the "result_V.csv" file is necessary to identify the closest data.
 
 To facilitate the replication of Figure 4b,c, we have retained the obtained data for your convenience. As such, the file "SquareRR_AOPS_Fig_04bc.py" may be used to test or apply the forward model. The relevant data for running this file is stored in the files
  "CircularRR_AOPS_Fig_03bc_Lower_sample.csv",
@@ -71,7 +71,8 @@ As part of step 2 (transmission spectra), we have taken measures to facilitate t
 
 
 #### Figure_S4
-To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link: https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
+To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link:
+https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
 
 
 #### Figure_S5
@@ -83,11 +84,11 @@ To generate Figure S6, it is necessary to vary the number of layers during each 
 We have retained the acquired data to facilitate the reproduction of the plot. Therefore, to generate Figure S6, it is recommended to utilize the file "SquareRR_AOPS_S2_Fig_S06.py." The requisite data for executing this file is stored in the "SquareRR_AOPS_Fig_S06.csv," which has been loaded into the system.
 
 #### Figure_S7
-To achieve a more distinct trough in the transmission spectrum of the through port, storing the spectra derived from the forward model into a matrix file that is compatible with MATLAB software is recommended. It is advisable to name the file "dataset_T-shape3." Following this, the file "SquareRR_AOPS_Fig_S07.m" can be employed to generate the desired spectra in the format of Figure S7.
+To achieve a more distinct trough in the transmission spectrum of the through port, it is recommended that the spectra derived from the forward model be stored in a matrix file compatible with MATLAB software. The file should be named "dataset_T-shape3." Following this, the file "SquareRR_AOPS_Fig_S07.m" can be employed to generate the desired spectra in the format of Figure S7.
 
-To achieve a more pronounced dip in the transmission spectrum of the drop port, it is recommended to utilize the file "SquareRR_AOPS_Fig_S07_drop.m". This file can help create a sharper and more defined dip in the spectrum, which can be valuable in various business or academic settings. By employing this file, you can enhance the quality and accuracy of your work and achieve more precise results. Overall, utilizing this file can be a valuable tool in your research and experimentation, and can help improve your work's overall quality.
+To achieve a more pronounced dip in the transmission spectrum of the drop port, it is recommended to utilize the file "SquareRR_AOPS_Fig_S07_drop.m". This file can help create a sharper and more defined dip in the spectrum, which can be valuable in various business or academic settings. By employing this file, you can enhance the quality and accuracy of your work and achieve more precise results. Utilizing this file can be a valuable tool in your research and experimentation, and can help improve your work's overall quality.
 
-===> Please be advised that the initial row of the data matrix is intended to contain NaN (Not a Number) values. This is a deliberate measure to ensure the data is correctly aligned and represented accurately. It is important to note that any modification of the first row may result in errors that could compromise the integrity of the entire data set. Therefore, we strongly recommend that the first row be left untouched and that any analysis be performed on subsequent rows. Thank you for your attention to this matter.
+===> Please be advised that the initial row of the data matrix is intended to contain NaN (Not a Number) values. This deliberate measure ensures the data is aligned and represented accurately. It is important to note that any modification of the first row may result in errors that could compromise the integrity of the entire data set. Therefore, we strongly recommend that the first row be left untouched and that any analysis be performed on subsequent rows. Thank you for your attention to this matter.
 ===> Please note that the initial column in the data matrix must contain zero values. The second column should be dedicated to representing the wavelength. Columns 3 to 6 are designated for S1 to S5, respectively. Columns 8 and 9 are allocated for T1 and T2, respectively. Ensure these guidelines are strictly adhered to when working with the data matrix. Any deviation from this standard may result in erroneous conclusions and incorrect data analysis.
 
 #### Figure_S8

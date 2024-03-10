@@ -1,11 +1,8 @@
 """
 The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
 
-@authors: Ehsan Adibnia, Majid Ghadrdan and Mohammad Ali Mansouri-Birjandi
-Corresponding authors: mansouri@ece.usb.ac.ir and ghadrdan@ece.usb.ac.ir
-
-This code is corresponding to the Section S2 (Dataset discussion) of the Supplementary Information of the article.
-This code regenerates the Fig S4a and b of the Supplementary Information of the paper.
+This code corresponds to the Section S2 (Dataset discussion) of the Supplementary Information of the article.
+This code regenerates Fig. S4a and b of the paper's Supplementary Information.
 Please cite the paper in any publication using this code.
 """
 import numpy as np

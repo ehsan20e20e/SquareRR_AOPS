@@ -71,9 +71,9 @@ As part of step 2 (transmission spectra), we have taken measures to facilitate t
 
 
 #### Figure_S4
-To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link:
-https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
+To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The necessary data for running this file is stored in the file "result_V.csv," which can be downloaded at the following link: 
 
+https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
 
 #### Figure_S5
 To generate Figure S5, the number of layers and neurons must be varied each time, and the corresponding loss value must be recorded. To ensure the reproducibility of the plot, we have stored the acquired data, which can be utilized to execute the file "CircularRR_AOPS_Fig_S05.py." The required data for running this file is stored in the "SquareRR_AOPS_Fig_S05.csv," loaded here. Therefore, generating Figure S5 can be achieved without issues by utilizing the aforementioned files.

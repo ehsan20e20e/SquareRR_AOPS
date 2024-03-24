@@ -1,4 +1,4 @@
-%The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
+%The code for the research presented in the paper titled "Enabling inverse design of plasmon-based nonlinear square resonators with deep neural networks."
 
 % In this code, first and second-order derivatives of transmission spectrum versus wavelength will be calculated.
 % In this code, local minima and maxima will be calculated.

@@ -41,7 +41,7 @@ The proposed plasmonic switch structure's raw data is available in CSV files. Th
 ===> Please be advised that there was an error in the input data related to the Drop port. The data was mistakenly entered as negative, which has been rectified in the written code. To ensure the accuracy of the data, we have applied the absolute value function to the input data. We apologize for any inconvenience this may have caused and assure you that we have taken the necessary measures to prevent such errors in the future.
 
 ### Forward_model
-To train the forward model, utilizing the Python code provided in the 'SquareRR_AOPS_Forward_model.py' file is recommended. To this end, we have generated 147,456 unique examples through FDTD simulations and saved them in the "result_V.csv" file (Please take note of the following information: 18432 out of the total number of examples is sufficient.). As a prerequisite for executing the 'CircularRR_AOPS_Forward_model.py' file, it is essential to obtain the 'result_H.csv' file which constitutes a big data file with a size of 5.7 gigabytes. By following these steps, you can effectively train the forward model and achieve accurate results.
+To train the forward model, utilizing the Python code provided in the 'SquareRR_AOPS_Forward_model.py' file is recommended. To this end, we have generated 147,456 unique examples through FDTD simulations and saved them in the "result_V.csv" file (Please take note of the following information: 18432 out of the total number of examples is sufficient.). As a prerequisite for executing the 'SquareRR_AOPS_Forward_model.py' file, it is essential to obtain the 'result_H.csv' file which constitutes a big data file with a size of 5.7 gigabytes. By following these steps, you can effectively train the forward model and achieve accurate results.
 
 The 'result_V.csv' file can be accessed as a single file through the following link: 
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases/download/untagged-54db6d6bee08573b3623/result_V.rar
@@ -52,7 +52,7 @@ Upon completing the training process, Figure 4a will display the loss values. Su
 To obtain Figures 4b and 4c, it is necessary to instruct the trained model to predict the output spectra for unseen geometric parameters, at wavelengths ranging from 1000 to 1800 nm. This requires predicting the transmission spectra for 800 wavelengths to form the complete spectrum. Once this is done, it is necessary to compare the predicted spectrum with the spectrum obtained using the FDTD method. Searching for the nearest data points to the selected geometric parameters in the "result_V.csv" file is necessary to identify the closest data.
 
 To facilitate the replication of Figure 4b,c, we have retained the obtained data for your convenience. As such, the file "SquareRR_AOPS_Fig_04bc.py" may be used to test or apply the forward model. The relevant data for running this file is stored in the files
- "CircularRR_AOPS_Fig_03bc_Lower_sample.csv",
+ "SquareRR_AOPS_Fig_03bc_Lower_sample.csv",
  "SquareRR_AOPS_Fig_04bc_Higher_sample.csv",
  "SquareRR_AOPS_Fig_04bc_FDTD_origin.csv",
  "SquareRR_AOPS_forward_model.json",
@@ -72,7 +72,7 @@ To test the inverse model and generate Figures 7b and c, it is necessary to comp
 
 Figure 7b and c:
 
-Step 1: Geometric Parameter. We have meticulously archived the obtained data to facilitate the replication of the legend of Figure 7b and c. Consequently, the "SquareRR_AOPS_Figure07.py" file can validate or apply the inverse model. The mandatory data files for running this program are "SquareRR_AOPS_Figure07_furthest_data.csv," "CircularRR_AOPS_inverse_model.json," and "SquareRR_AOPS_inverse_model_weights.h5," all of which have been preloaded here.
+Step 1: Geometric Parameter. We have meticulously archived the obtained data to facilitate the replication of the legend of Figure 7b and c. Consequently, the "SquareRR_AOPS_Figure07.py" file can validate or apply the inverse model. The mandatory data files for running this program are "SquareRR_AOPS_Figure07_furthest_data.csv," "SquareRR_AOPS_inverse_model.json," and "SquareRR_AOPS_inverse_model_weights.h5," all of which have been preloaded here.
 
 As part of step 2 (transmission spectra), we have taken measures to facilitate the reproduction of Figure 7b and c. Specifically, we have stored the acquired data, which you can use to regenerate the figure. To this end, we recommend utilizing the file "SquareRR_AOPS_Fig_07bc.py." The required data for running this file is stored in "SquareRR_AOPS_Fig_07bc_furthest_predicted.csv," which we have already loaded for your convenience.
 
@@ -84,7 +84,7 @@ To generate Figure S4, please refer to the file "SquareRR_AOPS_Fig_S04.py." The 
 https://github.com/ehsan20e20e/SquareRR_AOPS/releases.
 
 #### Figure_S5
-To generate Figure S5, the number of layers and neurons must be varied each time, and the corresponding loss value must be recorded. To ensure the reproducibility of the plot, we have stored the acquired data, which can be utilized to execute the file "CircularRR_AOPS_Fig_S05.py." The required data for running this file is stored in the "SquareRR_AOPS_Fig_S05.csv," loaded here. Therefore, generating Figure S5 can be achieved without issues by utilizing the aforementioned files.
+To generate Figure S5, the number of layers and neurons must be varied each time, and the corresponding loss value must be recorded. To ensure the reproducibility of the plot, we have stored the acquired data, which can be utilized to execute the file "SquareRR_AOPS_Fig_S05.py." The required data for running this file is stored in the "SquareRR_AOPS_Fig_S05.csv," loaded here. Therefore, generating Figure S5 can be achieved without issues by utilizing the aforementioned files.
 
 #### Figure_S6
 To generate Figure S6, it is necessary to vary the number of layers during each iteration. Upon completion of the network training phase, the network should be employed to predict the transmission spectrum of a structure with specific geometric parameters that have not been previously observed by the network. In this research, we considered S1=S2=S3=45nm and S4=S5=20nm for Figure S6, and compared the predicted spectrum with the spectrum obtained through the FDTD method.

@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 from matplotlib.font_manager import FontProperties
 
-lum = pd.read_csv("OctagonalRR_AOPS_Fig_07bc_furthest_predicted.csv", header=None)
+lum = pd.read_csv("SquareRR_AOPS_Fig_07bc_furthest_predicted.csv", header=None)
 g = "\u00D7"
 
 lum=lum.to_numpy()

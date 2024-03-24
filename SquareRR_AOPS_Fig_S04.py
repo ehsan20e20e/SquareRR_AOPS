@@ -1,5 +1,5 @@
 """
-The code for the research presented in the paper titled "Spectrum prediction and inverse design of all-optical nonlinear plasmonic square ring resonator switches using deep learning
+The code for the research presented in the paper titled "Enabling inverse design of plasmon-based nonlinear square resonators with deep neural networks."
 
 This code corresponds to the Section S2 (Dataset discussion) of the Supplementary Information of the article.
 This code regenerates Fig. S4a and b of the paper's Supplementary Information.

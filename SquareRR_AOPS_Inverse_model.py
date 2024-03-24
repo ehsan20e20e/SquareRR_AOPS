@@ -114,7 +114,7 @@ with open('loss.csv', 'w', newline='') as csvfile:
 
 # save the inverse model and its weights
 model_json = Model.to_json()
-json_file = open("T-shaped switchat_model_inverse.json", "w")
+json_file = open("T-shaped switch_Nozhat_model_inverse.json", "w")
 json_file.write(model_json)   
 Model.save_weights("T-shaped switch_Nozhat_model_weights_inverse.h5")
 json_file.close()

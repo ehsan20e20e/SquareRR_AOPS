@@ -1,5 +1,5 @@
 # SquareRR_AOPS
-Animation Abstract (loading ... please wait):
+Animated Abstract (loading ... please wait):
 ![SquareRR_AOPS2](https://github.com/ehsan20e20e/SquareRR_AOPS/assets/106914575/82b8c75c-9f30-4d6e-8ac6-914e99deb533)
 
 ## Describtion

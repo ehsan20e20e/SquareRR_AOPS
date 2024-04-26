@@ -3,7 +3,7 @@ Animated Abstract (loading ... please wait):
 ![SquareRR_AOPS2](https://github.com/ehsan20e20e/SquareRR_AOPS/assets/106914575/82b8c75c-9f30-4d6e-8ac6-914e99deb533)
 
 ## Describtion
-The provided repository serves as a demonstration of the application of deep learning techniques in the prediction of the spectral response of all-optical plasmonic switches. This repository is based on the extensive research presented in the paper titled "Inverse_design_of_plasmon-based_nonlinear_square_resonators_enabled_by_deep_neural_networks." It has been designed to address inverse design challenges, with a specific focus on the fields of photonics and optics.
+The provided repository serves as a demonstration of the application of deep learning techniques in the prediction of the spectral response of all-optical plasmonic switches. This repository is based on the extensive research presented in the paper titled "**Inverse design of plasmon-based nonlinear square resonators enabled by deep neural networks**." It has been designed to address inverse design challenges, with a specific focus on the fields of photonics and optics.
 
 #### Table of contents
 * [Prerequisites](#Prerequisites)
